@@ -1,3 +1,41 @@
+# 🚧 The Problems Netty Tries to Solve
+
+## 1. Complexity of Java NIO (New I/O)
+    - Problem: Java's built-in NIO API is powerful but hard to use correctly and efficiently. You have to manage:
+        - Selectors
+        - Channels
+        - Buffers
+        - Threading
+        - Backpressure and concurrency manually
+    - Netty's Solution: Wraps NIO with a much simpler and more powerful abstraction that manages selectors, buffers, and threads for you.
+
+
+## 2. Performance Bottlenecks in Blocking I/O
+    - Problem: Traditional Java IO (blocking) models create a one-thread-per-connection architecture. That:
+        - Wastes memory and CPU on idle threads
+        - Limits scalability (e.g., hard to support 10k+ connections)
+    - Netty's Solution: Uses non-blocking, asynchronous I/O, allowing thousands or even millions of concurrent connections with just a small number of threads.
+
+
+## 3. Difficulty in Building Protocols
+    - Problem: Creating custom binary or text-based protocols with Java IO/NIO is hard, repetitive, and error-prone.
+
+    - Netty's Solution: Provides an elegant pipeline model with encoders/decoders (codecs) for processing protocols (e.g., HTTP, MQTT, your custom IoT protocol).
+
+## 4. Manual Resource Management
+    - Problem: You need to manage memory buffers and thread lifecycles manually with low-level APIs.
+
+    - Netty's Solution: Includes efficient buffer management (ByteBuf) and thread pooling through its EventLoopGroup.
+
+## 5. No Unified Networking Framework
+    - Problem: Developers often build ad hoc networking logic tailored to specific use cases.
+    - Netty's Solution: Offers a flexible and extensible framework to build:
+        - TCP/UDP clients and servers
+        - WebSocket servers
+        - Custom protocols
+        - Proxies, load balancers, etc.
+
+
 # 📡 Netty Learning Roadmap for Custom IoT Protocol Server
 
 This roadmap is designed for developers aiming to build a **Netty-based server** capable of handling **custom binary protocols** used in **IoT devices** (e.g., GPS trackers, MDVRs, Howen devices).
