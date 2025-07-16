@@ -60,7 +60,7 @@ Before diving into Netty, make sure you're comfortable with:
 | Concept                     | Description |
 |-----------------------------|-------------|
 | **Netty Architecture**      | EventLoop, Channel, Pipeline, Handlers |
-| **ByteBuf**                 | Netty’s efficient byte container |
+| **ByteBuf**                 | Class ByteBuf—Netty’s data container |
 | **ChannelInboundHandler**   | Handle inbound traffic (e.g., packets from device) |
 | **ChannelOutboundHandler**  | Handle outbound data (e.g., send response to device) |
 | **ChannelPipeline**         | Chain of handlers for processing data |
